@@ -1,10 +1,46 @@
 # Ingest data
 
-## Introduction
+## Dataflow Gen2
+
+1. In the Lakehouse explorer, you see options to load data into lakehouse. Select **New Dataflow Gen2**.
+
+![Create gen 2 dataflow](/images/create-dataflow-gen2.png)
+
+2. On the new dataflow pane, select **Import from a Text/CSV file**.
+
+
+3. On the Connect to data source pane, 
+    -   select the **link to file** radio button. paste the url below into **File path or URL**, select Next.
+
+        Use the following URL
+        https://raw.githubusercontent.com/JoburgDataPlatformUserGroup/FabricPreCon/main/source/dimension_customer.csv
+    - Select **Create new connection** if not already selected
+    - leave **Data Gateway** as **(none)**
+    - Set **Authentication kind** to **Anonymous**
+
+    ![Screenshot showing where to select Upload file and where to drag the previously downloaded file.](/images/dataflow-source.png)
+
+4. Select **Next**.
+
+5. When the **preview file data** pane appears validate the data 
+
+    ![Review data source options for dataflow](/images/dataflow-reviewdata.png)
+
+6. Select **Create**.
+
+![create dataflow when happy with transformations](/images/dataflow-publish.png)
+
+
+
+1. You can then validate that the table has been successuflly laded by opening up the tables section of the 
+![Confirm dataflow created table ](/images/dataflow-confirm-new-table.png)
+
+
+# Data Pipeline
 
 Data ingestion is the process moving data into the data repository so that it can be worked on. While Shortcuts make it possible to connect to data that already exists elsewhere it is often a requirement that we first create a local copy of the data. In this module we look at how to create such ingestion processes using eiter data pipelines or dataflows gen 2 
 
-## Tutorial
+## 
 In this section, you use the Copy data activity of the Data Factory pipeline to ingest sample data from an Azure storage account to the Files section of the lakehouse you created earlier.
 
 1. Select Workspaces in the left navigation pane, and then select your new workspace from the Workspaces menu. The items view of your workspace appears.

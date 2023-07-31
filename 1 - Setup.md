@@ -1,9 +1,10 @@
 # Setup
 
-# Create a workspace (Excercise)
+## Create a workspace (Excercise)
 The workspace contains all the items needed for data warehousing, including: Data Factory pipelines, the data warehouse, Power BI datasets, and reports.
 
-1. Open the following [Link](https://app.powerbi.com).
+1. Open the following [Link](https://app.powerbi.com). (*Right click on the link and open in a new tab*)
+
 2. Select Workspaces > New workspace.
 
 ![Screenshot of workspaces pane showing where to select New workspace.](/images/create-new-workspace.png)
@@ -12,49 +13,57 @@ The workspace contains all the items needed for data warehousing, including: Dat
 
  - **Name**: FabricWorkshop_{*Enter your name here*}.
  - **Description**: Optionally, enter a description for the workspace.
-Screenshot of the Create a workspace dialog box, showing where to enter the new workspace name.
 
 4. Expand the **Advanced** section.
 
-5. Choose Fabric capacity or Trial in the License mode section. 
+5. Choose Fabric capacity that you want to use to run your workspace. 
 
-        *We will use the Trial Capacity for this workshop*
+        We will use the 'Trial' Capacity for this workshop unless otherwise stated 
 
-6. Select **Apply**. The workspace is created and opened.
+6. Select **Apply**. 
 
     ![The create workspace repo](/images/CreateWorkspace.png)
 
+7. The workspace is created and opened.
+
 ### Open an existing workspace
 
-7. In the Power BI service, select Workspaces from the left-hand menu.
+8. In the Power BI service, select Workspaces from the left-hand menu.
 
-8. To open your workspace, enter its name in the search textbox located at the top and select it from the search results.
+9. To open your workspace, enter its name in the search textbox located at the top and select it from the search results.
 
-# Create a lakehouse
+## Create a lakehouse
 
 
 1. From the experience switcher located at the bottom left, select Data Engineering.
+
     ![Screenshot showing where to select the experience switcher and Data Engineering.](/images/workload-switch-data-engineering.png)
 
 
 2. In the Data Engineering tab, select Lakehouse to create a lakehouse.
+
     ![Create Lakehouse](/images/Create-lakehouse.png)
 
-3. In the New lakehouse dialog box, enter wwilakehouse in the Name field.
+3. In the New lakehouse dialog box, enter **wwilakehouse** in the Name field.
 
     ![Screenshot of the New lakehouse dialog box.](/images/new-lakehouse-name.png)
 
-4. Select Create to create and open the new lakehouse.
+4. Select **Create** to create and open the new lakehouse.
 
-# Create a warehouse
+    ![New lakehouse](/images/new-lakehouse.png)
+
+
+## Create a warehouse
 
 1. From the experience switcher located at the bottom left, select Data Engineering.
-    ![](/images/change-to-datawarehouse.png)
+
+    ![Change experience to warehouse](/images/change-to-datawarehouse.png)
 
 2. Select the **+ New** button to display a full list of available items. From the list of objects to create, choose **Warehouse (Preview)** to create a new Warehouse in Microsoft Fabric
+
     ![Screenshot of the workspace screen, showing where to select Warehouse (Preview) in the New drop-down menu.](/images/create-warehouse.png)
 
-3. On the New warehouse dialog, enter WideWorldImporters as the name.
+3. On the **New warehouse** dialog, enter **WideWorldImporters** as the name.
 
 4. Select **Create**.
 
