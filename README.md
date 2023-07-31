@@ -10,7 +10,7 @@ This trainign day is based on the official tutorials build by Microsoft. after y
 In order to complete this training dat you will require the follwing
 
 - Access to the fabric\Power BI portal and access to a fabric capacity
-    - If you do not ahve access to you own capacity, you will be given access to a temporary capacity that we will use for the day. If possible you should use yur own tenant, that way you will maintain access to your workspace after the training day is complete.
+    - If you do not have access to you own capacity, you will be given access to a temporary capacity that we will use for the day. If possible you should use yur own tenant, that way you will maintain access to your workspace after the training day is complete.
 - A laptop
 
 ## Agenda

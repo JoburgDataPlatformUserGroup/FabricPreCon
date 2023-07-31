@@ -1,7 +1,12 @@
 # Setup
 
+In this module we will complete some of
 
-## Create a workspace
+## Provisioning a fabric Capacity (Demo)
+
+
+
+## Create a workspace (Excercise)
 The workspace contains all the items needed for data warehousing, including: Data Factory pipelines, the data warehouse, Power BI datasets, and reports.
 
 1. Open the following [Link](https://app.powerbi.com).
@@ -34,7 +39,7 @@ Screenshot of the Create a workspace dialog box, showing where to enter the new 
 
 something else
 
-4. smething else
+4. something else
 5. something 
 
 ##
