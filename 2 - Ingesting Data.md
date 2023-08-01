@@ -1,5 +1,7 @@
 # Ingest data
 
+Data ingestion is the process moving data into the data repository so that it can be worked on. While Shortcuts make it possible to connect to data that already exists elsewhere it is often a requirement that we first create a local copy of the data. In this module we look at how to create such ingestion processes using eiter data pipelines or dataflows gen 2 
+
 ## Dataflow Gen2
 
 1. In the Lakehouse explorer, you see options to load data into lakehouse. Select **New Dataflow Gen2**.
@@ -32,15 +34,12 @@
 
 
 
-1. You can then validate that the table has been successuflly laded by opening up the tables section of the 
+7. You can then validate that the table has been successuflly laded by opening up the tables section of the 
 ![Confirm dataflow created table ](/images/dataflow-confirm-new-table.png)
 
 
 # Data Pipeline
 
-Data ingestion is the process moving data into the data repository so that it can be worked on. While Shortcuts make it possible to connect to data that already exists elsewhere it is often a requirement that we first create a local copy of the data. In this module we look at how to create such ingestion processes using eiter data pipelines or dataflows gen 2 
-
-## 
 In this section, you use the Copy data activity of the Data Factory pipeline to ingest sample data from an Azure storage account to the Files section of the lakehouse you created earlier.
 
 1. Select Workspaces in the left navigation pane, and then select your new workspace from the Workspaces menu. The items view of your workspace appears.
@@ -114,3 +113,6 @@ Once the data is copied, go to the items view of the workspace and select your n
 Validate that in the Lakehouse explorer view, a new folder wwi-raw-data has been created and data for all the tables have been copied there.
 
 ![Screenshot showing the source data is copied into the Lakehouse explorer.]()
+
+
+**End of Excercise 2**
