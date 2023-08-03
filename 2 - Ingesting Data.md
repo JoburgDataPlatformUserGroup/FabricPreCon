@@ -68,43 +68,41 @@ In this section, you use the Copy data activity of the Data Factory pipeline to 
 
 8. On the next screen of the New connection wizard, enter the following details and select Create to create the connection to the data source.
 
-Property|	Value
+Property | Value
 ---|---
-Account name or URI	|https://azuresynapsestorage.blob.core.windows.net/sampledata
-Connection	|Create new connection
-Connection name	|wwisampledata
-Authentication kind	|Anonymous
+Account name or URI	| https://datasaturdayjhb2023.blob.core.windows.net/samples
+Connection	| Create new connection
+Connection name	| wwisampledata
+Authentication kind	| Anonymous
 
 ![Screenshot of the Connection settings screen, showing where to enter the details and select Create.](/images/connection-settings-details.png)
 
 9. Once the new connection is created, return to the Source tab of the copy data activity, and the newly created connection is selected by default. Specify the following properties before moving to the destination settings.
 
-Property	|Value
+Property | Value
 ---|---
-Data store type	|External
-Connection	|wwisampledata
-File path type	|File path
-File path	Container name (first text box): |sampledata
-Directory name (second text box): |WideWorldImportersDW/parquet
-Recursively	|Checked
-File Format	|Binary
+Data store type	| **External**
+Connection	| **wwisampledata**
+File path type	| **File path**
+File path	Container name (first text box): | **samples**
+Directory name (second text box): | **WWI**
+Recursively	| **Checked**
+File Format	| **Binary**
 
-    ![Screenshot of the source tab showing where to enter the specific details.](/images/source-tab-details.png)
-
-
+![Screenshot of the source tab showing where to enter the specific details.](/images/source-tab-details.png)
 
 10. Under the Destination tab of the selected copy data activity, specify the following properties:
 
 Property |	Value
 ---|---
-Data store type|	Workspace
-Workspace data store type	|Lakehouse
-Lakehouse	|wwilakehouse
-Root Folder	|Files
-File path	Directory name (first text box): |wwi-raw-data
-File Format	|Binary
+Data store type | **Workspace**
+Workspace data store type	|**Lakehouse**
+Lakehouse	|**wwilakehouse**
+Root Folder	|**Files**
+File path	Directory name (first text box): | **wwi-raw**
+File Format	| **Binary**
 
-    ![Screenshot of the Destination tab, showing where to enter specific details.](/images/destination-tab-details.png)
+![Screenshot of the Destination tab, showing where to enter specific details.](/images/destination-tab-details.png)
 
 11. You have finished configuring the copy data activity. Select the **Save** button on the top ribbon (under **Home**) to save your changes, and select Run to execute your pipeline and its activity. You can also schedule pipelines to refresh data at defined intervals to meet your business requirements. For this tutorial, we run the pipeline only once by clicking on **Run** button.
 
