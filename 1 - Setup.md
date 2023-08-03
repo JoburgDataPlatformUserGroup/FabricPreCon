@@ -1,6 +1,6 @@
 # Setup
 
-## Create a workspace (Excercise)
+## Create a workspace (Exercise)
 The workspace contains all the items needed for data warehousing, including: Data Factory pipelines, the data warehouse, Power BI datasets, and reports.
 
 1. Open the following [Link](https://app.powerbi.com). (*Right click on the link and open in a new tab*)
