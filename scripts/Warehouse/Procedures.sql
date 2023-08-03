@@ -1,11 +1,11 @@
 --city
-CREATE OR ALTER PROCEDURE dbo.Load_Dimension_City AS
+CREATE OR ALTER PROCEDURE dbo.Load_dimension_City AS
 Begin
 
     DELETE FROM [dbo].[dimension_city]
 
-    INSERT INTO [dbo].[dimension_city]( [CityKey],[CityId],[City],[StateProvince],[Country] )
-    SELECT row_number() OVER(ORDER BY CityId) [CityKey], CityId,City,StateProvince,Country 
+    INSERT INTO [dbo].[dimension_city]( [CityKey],[WWICityId],[City],[StateProvince],[Country] )
+    SELECT row_number() OVER(ORDER BY WWICityId) [CityKey], WWICityId,City,StateProvince,Country 
     FROM [wwilakehouse].[dbo].[City] c
 END
 --Date
@@ -69,7 +69,6 @@ begin
 	FROM [wwilakehouse].[dbo].[Employee]
 END
 GO
---SAles
 
 --stockItem
 create OR ALTER procedure dbo.load_dimension_stockitem AS
@@ -128,8 +127,31 @@ Begin
 	FROM [wwilakehouse].[dbo].[customer]
 END
 
+--SAles
+GO
+create or alter procedure [dbo].[load_fact_sales] as
+begin
+    delete from dbo.fact_sale
+    
+    insert into dbo.fact_sale([CityKey],[EmployeeKey],[CustomerKey],[InvoiceDateKey],[StockItemKey],[Quantity],[UnitPrice],[Year],[Month])
+	SELECT 
+    [DC].[CityKey]
+	,[DE].[EmployeeKey]
+    ,DCust.CustomerKey
+	,[InvoiceDate] [InvoiceDateKey]
+	,DS.[StockItemKey]
+	,[Quantity]
+	,[UnitPrice]
+	,[Year]
+	,[Month]
+    FROM [wwilakehouse].[dbo].[Sales] S
+	LEFT JOIN [dbo].[dimension_city] DC ON DC.WWICityId = S.[WWICityID] 
+	LEFT JOIN [dbo].[dimension_Employee] DE ON DE.WWIEmployeeId = S.WWIEmployeeID
+	LEFT JOIN [dbo].[dimension_StockItem] DS ON DS.[WWIStockItemId] = S.WWIStockItemID
+    left join [dbo].[dimension_customer] DCust ON DCust.WWICustomerID = S.WWICustomerID 
 
-
+end
+GO
 
 create or alter procedure dbo.[load_master] as
 Begin
@@ -138,7 +160,5 @@ Begin
 	exec [dbo].[load_dimension_date]
 	exec [dbo].[load_dimension_Employee]
 	exec [dbo].[load_dimension_stockitem]
+	exec [dbo].[load_fact_sales]
 end
-
-
-exec dbo.[load_master]

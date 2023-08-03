@@ -21,7 +21,7 @@ GO
 CREATE TABLE [dbo].[dimension_city]
 (
     [CityKey] INT NOT NULL,
-    [CityId] int,
+    [WWICityId] int,
     [City] varchar(255),
     [StateProvince] varchar(255),
     [Country] varchar(255)
@@ -64,3 +64,19 @@ CREATE TABLE [dbo].[dimension_customer](
 	[PrimaryContact] [varchar](8000) NULL,
 	[PostalCode] [varchar](8000) NULL,
 ) 
+GO
+DROP TABLE IF EXISTS [dbo].[fact_sale]
+GO
+CREATE TABLE [dbo].[fact_sale](
+	[CityKey] int null,
+    [EmployeeKey] int null,
+    [CustomerKey] int null,
+    [InvoiceDateKey] date null,
+    [StockItemKey] int null,
+    [Quantity] int null,
+    [UnitPrice] decimal(18,4),
+    [Year] int null,
+    [Month] int null
+) 
+
+

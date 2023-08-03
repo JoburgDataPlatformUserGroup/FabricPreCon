@@ -1,2 +1,0 @@
---Execute the stored procedure to create the aggregate table.
-EXEC [dbo].[populate_aggregate_sale_by_city];

@@ -1,7 +1,7 @@
 # Setup
 
-## Create a workspace (Exercise)
-The workspace contains all the items needed for data warehousing, including: Data Factory pipelines, the data warehouse, Power BI datasets, and reports.
+## Create a workspace (Excercise)
+The workspace contains all the items needed for data analytics, including: Data Factory pipelines, the data warehouse, Power BI datasets, and reports.
 
 1. Open the following [Link](https://app.powerbi.com). (*Right click on the link and open in a new tab*)
 
@@ -30,7 +30,7 @@ The workspace contains all the items needed for data warehousing, including: Dat
 
 8. In the Power BI service, select Workspaces from the left-hand menu.
 
-9. To open your workspace, enter its name in the search textbox located at the top and select it from the search results.
+9. To open your workspace, enter its name in the search textbox located at the top and select it from the search results.(*If you do not see the workspace listed try press **F5** to refresh the browser window*)
 
 ## Create a lakehouse
 
@@ -39,6 +39,8 @@ The workspace contains all the items needed for data warehousing, including: Dat
 
     ![Screenshot showing where to select the experience switcher and Data Engineering.](/images/workload-switch-data-engineering.png)
 
+
+    *You may need tyo reselect the workspace*
 
 2. In the Data Engineering tab, select Lakehouse to create a lakehouse.
 
@@ -55,7 +57,7 @@ The workspace contains all the items needed for data warehousing, including: Dat
 
 ## Create a warehouse
 
-1. From the experience switcher located at the bottom left, select Data Engineering.
+1. From the experience switcher located at the bottom left, select **Data Warehousing**.
 
     ![Change experience to warehouse](/images/change-to-datawarehouse.png)
 
@@ -63,7 +65,7 @@ The workspace contains all the items needed for data warehousing, including: Dat
 
     ![Screenshot of the workspace screen, showing where to select Warehouse (Preview) in the New drop-down menu.](/images/create-warehouse.png)
 
-3. On the **New warehouse** dialog, enter **WideWorldImporters** as the name.
+3. On the **New warehouse** dialog, enter **wwidatawarehouse** as the name.
 
 4. Select **Create**.
 

@@ -25,62 +25,77 @@
 4. Create the fact_sale table.
 */
 
---dimension_city
-DROP TABLE IF EXISTS [dbo].[dimension_city];
+DROP TABLE IF EXISTS [dbo].[dimension_date];
+CREATE TABLE [dbo].[dimension_date](
+	[Date] [datetime2](6) NULL,
+	[DayNumber] [int] NULL,
+	[Day] [varchar](8000) NULL,
+	[Month] [varchar](8000) NULL,
+	[ShortMonth] [varchar](8000) NULL,
+	[CalendarMonthNumber] [int] NULL,
+	[CalendarMonthLabel] [varchar](8000) NULL,
+	[CalendarYear] [int] NULL,
+	[CalendarYearLabel] [varchar](8000) NULL,
+	[FiscalMonthNumber] [int] NULL,
+	[FiscalMonthLabel] [varchar](8000) NULL,
+	[FiscalYear] [int] NULL,
+	[FiscalYearLabel] [varchar](8000) NULL,
+	[ISOWeekNumber] [int] NULL
+);
+GO
+DROP TABLE IF EXISTS [dbo].[dimension_city]
+GO
 CREATE TABLE [dbo].[dimension_city]
-    (
-        [CityKey] [int] NULL,
-        [WWICityID] [int] NULL,
-        [City] [varchar](8000) NULL,
-        [StateProvince] [varchar](8000) NULL,
-        [Country] [varchar](8000) NULL,
-        [Continent] [varchar](8000) NULL,
-        [SalesTerritory] [varchar](8000) NULL,
-        [Region] [varchar](8000) NULL,
-        [Subregion] [varchar](8000) NULL,
-        [Location] [varchar](8000) NULL,
-        [LatestRecordedPopulation] [bigint] NULL,
-        [ValidFrom] [datetime2](6) NULL,
-        [ValidTo] [datetime2](6) NULL,
-        [LineageKey] [int] NULL
-    );
-
---fact_sale
-
-DROP TABLE IF EXISTS [dbo].[fact_sale];
-
-CREATE TABLE [dbo].[fact_sale]
-
-    (
-        [SaleKey] [bigint] NULL,
-        [CityKey] [int] NULL,
-        [CustomerKey] [int] NULL,
-        [BillToCustomerKey] [int] NULL,
-        [StockItemKey] [int] NULL,
-        [InvoiceDateKey] [datetime2](6) NULL,
-        [DeliveryDateKey] [datetime2](6) NULL,
-        [SalespersonKey] [int] NULL,
-        [WWIInvoiceID] [int] NULL,
-        [Description] [varchar](8000) NULL,
-        [Package] [varchar](8000) NULL,
-        [Quantity] [int] NULL,
-        [UnitPrice] [decimal](18, 2) NULL,
-        [TaxRate] [decimal](18, 3) NULL,
-        [TotalExcludingTax] [decimal](29, 2) NULL,
-        [TaxAmount] [decimal](38, 6) NULL,
-        [Profit] [decimal](18, 2) NULL,
-        [TotalIncludingTax] [decimal](38, 6) NULL,
-        [TotalDryItems] [int] NULL,
-        [TotalChillerItems] [int] NULL,
-        [LineageKey] [int] NULL,
-        [Month] [int] NULL,
-        [Year] [int] NULL,
-        [Quarter] [int] NULL
-    );
+(
+    [CityKey] INT NOT NULL,
+    [CityId] int,
+    [City] varchar(255),
+    [StateProvince] varchar(255),
+    [Country] varchar(255)
+)
+GO
+DROP TABLE IF EXISTS [dbo].[dimension_Employee]
+GO
+CREATE TABLE [dbo].[dimension_Employee](
+	[EmployeeKey] INT NOT NULL,
+	[WWIEmployeeId] [int] NULL,
+	[Employee] [varchar](8000) NULL,
+	[PreferredName] [varchar](8000) NULL,
+	[IsSalesPerson] [bit] NULL
+) 
+GO
+DROP TABLE IF EXISTS [dbo].[dimension_StockItem]
+GO
+CREATE TABLE [dbo].[dimension_StockItem](
+	[StockItemKey] [int] NOT NULL,
+	[WWIStockItemId] [int] NULL,
+	[StockItem] [varchar](8000) NULL,
+	[color] [varchar](8000) NULL,
+	[SellingPackage] [varchar](8000) NULL,
+	[buyingPackage] [varchar](8000) NULL,
+	[brand] [varchar](8000) NULL,
+	[Size] [varchar](8000) NULL,
+	[unitPrice] [decimal](18, 2) NULL,
+	[RecommendedRetailPrice] [decimal](18, 2) NULL
+) 
+GO
+DROP TABLE IF EXISTS [dbo].[dimension_customer]
+GO
+CREATE TABLE [dbo].[dimension_customer](
+	[CustomerKey] [bigint] NULL,
+	[WWICustomerID] [bigint] NULL,
+	[Customer] [varchar](8000) NULL,
+	[BillToCustomer] [varchar](8000) NULL,
+	[Category] [varchar](8000) NULL,
+	[BuyingGroup] [varchar](8000) NULL,
+	[PrimaryContact] [varchar](8000) NULL,
+	[PostalCode] [varchar](8000) NULL,
+) 
 
 
 ```
 6. Select Run to execute the query.
+
     ![Screenshot of the top corner of the query editor screen, showing where to select Run.](/images/run-to-execute.png)
 
 7. To save this query for reference later, right-click on the query tab just above the editor and select Rename.

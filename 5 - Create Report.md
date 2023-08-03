@@ -10,20 +10,26 @@
 
 3. On the Create Relationship settings:
 
-    a) Table 1 is populated with fact_sale and the column of CityKey.
-    b) Table 2 is populated with dimension_city and the column of CityKey.
-    c) Cardinality: select Many to one (*:1).
-    d) Cross filter direction: select Single.
-    e) Leave the box next to Make this relationship active checked.
-    f) Check the box next to Assume referential integrity.
+    - Table 1 is populated with fact_sale and the column of CityKey.
+    - Table 2 is populated with dimension_city and the column of CityKey.
+    - Cardinality: select Many to one (*:1).
+    - Cross filter direction: select Single.
+    - Leave the box next to Make this relationship active checked.
+    - Check the box next to Assume referential integrity.
 
 ![Screenshot of the Create Relationship screen, showing the specified values and where to select Assume referential integrity.](/images/create-relationship-dialog.png)
 
 4. Select Confirm.
 
-5. From the Home tab of the ribbon, select New report.
+5. Repeat this process for the remaining dimension tables
+    - dimension_customer
+    - dimenstion_date
+    - dimension_Employee
+    - dimension_StockItem
+ 
+6. From the Home tab of the ribbon, select **New report**.
 
-6. Build a Column chart visual:
+7. Build a Column chart visual:
 
     - On the Data pane, expand fact_sales and check the box next to Profit. This creates a column chart and adds the field to the Y-axis.
 
@@ -33,9 +39,9 @@
 
     ![Screenshot showing where to find the anchor point at the corner of a new visual report in the canvas screen.](/images/new-visual-canvas-anchor.png)
 
-7. Select anywhere on the blank canvas (or press the Esc key) so the column chart visual is no longer selected.
+8. Select anywhere on the blank canvas (or press the Esc key) so the column chart visual is no longer selected.
 
-8. Build a Maps visual:
+9. Build a Maps visual:
 
     1. On the Visualizations pane, select the ArcGIS Maps for Power BI visual.
 
@@ -43,7 +49,7 @@
 
     2. From the Data pane, drag StateProvince from the dimension_city table to the Location bucket on the Visualizations pane.
 
-    3. From the Data pane, drag Profit from the fact_sale table to the Size bucket on the Visualizations pane.
+    3. From the Data pane, drag **Total Sales** from the fact_sale table to the Size bucket on the Visualizations pane.
 
     ![Screenshot of the Data pane next to the Visualization pane, showing where to drag the relevant data.](/images/drag-data-to-visualization.png)
 
@@ -55,19 +61,19 @@
 
 10. Build a Table visual:
 
-    a) On the Visualizations pane, select the Table visual.
+    - On the Visualizations pane, select the Table visual.
 
     ![Screenshot of the Visualizations pane showing where to select the Table option.](/images/select-table-visualization.png)
 
-    b) From the Data pane, check the box next to SalesTerritory on the dimension_city table.
+    - From the Data pane, check the box next to SalesTerritory on the dimension_city table.
 
-    c) From the Data pane, check the box next to StateProvince on the dimension_city table.
+    - From the Data pane, check the box next to StateProvince on the dimension_city table.
 
-    d) From the Data pane, check the box next to Profit on the fact_sale table.
+    - From the Data pane, check the box next to Profit on the fact_sale table.
 
-    e) From the Data pane, check the box next to TotalExcludingTax on the fact_sale table.
+    - From the Data pane, check the box next to TotalExcludingTax on the fact_sale table.
 
-    f) Reposition and resize the column chart to take up the right half of the canvas by dragging the anchor points on the corners of the visual.
+    - Reposition and resize the column chart to take up the right half of the canvas by dragging the anchor points on the corners of the visual.
 
     ![Screenshot of the canvas next to the Visualization and Data panes, which show where to select the specified details. The canvas contains a bar chart, a map plot, and a table.](/images/canvas-three-reports.png)
 
@@ -78,3 +84,5 @@
 13. Select Save.
 
     ![Screenshot of the Save your report dialog box with Sales Analysis entered as the report name.](/images/save-sales-analysis-report.png)
+
+
