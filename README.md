@@ -4,14 +4,14 @@
 ## About
 This repo contains all the instructions and links that you will need to complete the data Saturday Johannesburg Precon.
 
-This trainign day is based on the official tutorials build by Microsoft. after you have completed this training you can complete the rest of the modules by going to this [page]('https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials') in Microsoft Learn.
+This training day is based on the official tutorials build by Microsoft. After you have completed this training you can complete the rest of the modules by going to this [page]('https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials') in Microsoft Learn.
 
 ## Requirements
-In order to complete this training dat you will require the follwing
+In order to complete this training dat you will require the following
 
-- Access to the fabric\Power BI portal and access to a fabric capacity
-    - If you do not have access to you own capacity, you will be given access to a temporary capacity that we will use for the day. If possible you should use yur own tenant, that way you will maintain access to your workspace after the training day is complete.
-- A laptop
+- Access to the Fabric\Power BI portal and access to a Fabric capacity
+    - If you do not have access to you own capacity, you will be given access to a temporary capacity that we will use for the day. If possible you should use your own tenant, that way you will maintain access to your workspace after the training day is complete.
+- A laptop with internet connection
 
 ## Agenda
 

@@ -1,6 +1,6 @@
 # Ingest data
 
-Data ingestion is the process moving data into the data repository so that it can be worked on. While Shortcuts make it possible to connect to data that already exists elsewhere it is often a requirement that we first create a local copy of the data. In this module we look at how to create such ingestion processes using eiter data pipelines or dataflows gen 2 
+Data ingestion is the process moving data into the data repository so that it can be worked on. While Shortcuts make it possible to connect to data that already exists elsewhere, it is often a requirement that we first create a local copy of the data. In this module we look at how to create such ingestion processes using eiter data pipelines or Dataflows Gen2 
 
 ## Dataflow Gen2
 
@@ -34,7 +34,7 @@ Data ingestion is the process moving data into the data repository so that it ca
 
 
 
-7. You can then validate that the table has been successuflly added by opening up the tables section of the 
+7. You can then validate that the table has been successfully added by opening up the tables section of the Lakehouse
     ![Confirm dataflow created table ](/images/dataflow-confirm-new-table.png)
 
 
