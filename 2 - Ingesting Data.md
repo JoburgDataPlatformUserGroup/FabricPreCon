@@ -30,11 +30,27 @@ Data ingestion is the process moving data into the data repository so that it ca
 
 6. Select **Create**.
 
+7. Select the destintion for the dataflow, browse the list of workspaces and select the workspace you created in the first exercise. Expand the workspace and select **wwilakehouse**. enter the name of the target table, we will call this table **customer**. 
+
+    ![Choose dataflow destination](/images/dataflow-choose-destination.png)
+
+8. select **Next**
+
+9. Dataflows can **append** or **replace** the imported data. for this excercise we will **Replace** the data. yu also have the ablility to change the datatypes and names of columns
+
+    ![Dataflow destination settings](/images/dataflow-destination-settings.png)
+
+10. select **Save Settings**
+
+11. Aftersaving settings you are taken to the online power query where toyu can add additional tables or edit the existing configuration.
+
     ![create dataflow when happy with transformations](/images/dataflow-publish.png)
 
+12. select **Publish**
 
+13. After selecting publish, the dataflow will begin to refresh.
 
-7. You can then validate that the table has been successuflly added by opening up the tables section of the 
+14. You can then validate that the table has been successuflly added by opening up the tables section of the 
     ![Confirm dataflow created table ](/images/dataflow-confirm-new-table.png)
 
 
