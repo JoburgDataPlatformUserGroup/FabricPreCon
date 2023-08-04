@@ -65,7 +65,7 @@ The workspace contains all the items needed for data analytics, including: Data 
 
     ![Screenshot of the workspace screen, showing where to select Warehouse (Preview) in the New drop-down menu.](/images/create-warehouse.png)
 
-3. On the **New warehouse** dialog, enter **wwidatawarehouse** as the name.
+3. On the **New warehouse** dialog, enter **wwiwarehouse** as the name.
 
 4. Select **Create**.
 
